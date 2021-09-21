@@ -20,14 +20,14 @@ export default class App extends Component {
       if (!this.state.keyword){
     return true }
      return (creature.keyword === this.state.keyword) });
-     
+     console.log(selectedCreatures)
      const moreFiltered =
      selectedCreatures
-     .filter(creature => {
+     .filter(selectedCreatures => {
       if (!this.state.horns){
     return true }
-     return (Number(creature.horns) === this.state.horns) })
-     
+     return (selectedCreatures.horns === Number(this.state.horns))})
+     console.log(selectedCreatures.horns)
     return (
       <div>
         <Header/>
