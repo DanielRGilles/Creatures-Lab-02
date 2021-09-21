@@ -1,3 +1,21 @@
+.header-class {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  background-color: turquoise;
+}
+.creature-select {
+  text-align: center;
+  font-size: 2rem;
+  background-color: pink;
+  margin: 0;
+}
+* {
+  margin: 0;
+}
+body {
+  background-color: lavender;
+}
 .list {
   list-style-type: none;
   border: dashed 1px black;
@@ -10,6 +28,7 @@
   background-color: aqua;
 }
 .creature {
+  justify-self: center;
   border: solid 1px black;
   margin: 5px;
   width: 400px;
@@ -17,6 +36,18 @@
   background-color: ivory;
 }
 .creature > img {
-  width: 200px;
-  height: auto;
+  width: auto;
+  height: 50%;
+  border-radius: 5px;
+  border: solid grey 1px;
+}
+.creature-neem {
+font-size: large;
+text-transform: uppercase;
+font-weight: bold;
+}
+.creature-deets {
+  background-color: white;
+  border: ridge 1px black;
+
 }
