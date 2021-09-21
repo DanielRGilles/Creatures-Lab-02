@@ -6,13 +6,17 @@ import Header from './components/Header.js';
 export default class App extends Component {
   state = {
     keyword: '',
-    horns: ''
+    horns: '',
+    type: ''
   }
   handleChange = (e) => {
     this.setState({ keyword: e.target.value })
 }
   handleHornChange = (e) => {
   this.setState({ horns: e.target.value })
+}
+handleTypeChange = (e) => {
+  this.setState({ type: e.target.value })
 }
   render() {
     const selectedCreatures = creatures
@@ -28,6 +32,13 @@ export default class App extends Component {
     return true }
      return (selectedCreatures.horns === Number(this.state.horns))})
      
+     const typeFiltered =
+     moreFiltered
+     .filter(moreFiltered => {
+      if (!this.state.type){
+    return true }
+     return (moreFiltered.type === this.state.type)})
+
     return (
       <div>
         <Header/>
@@ -56,9 +67,16 @@ export default class App extends Component {
         <option value='3'>3</option>
         <option value='100'>100</option>
         </select>
+        <label> Or  Type of Creature  </label>
+        <select onChange={this.handleTypeChange}> 
+        <option value=''>All</option>
+        <option value='living'>living</option>
+        <option value='mythical'>mythical</option>
+        <option value='extinct'>extinct</option>
+        </select>
         </div>
         <ul className='list'>
-           {moreFiltered.map(creature => {
+           {typeFiltered.map(creature => {
             return (
           <li className='creature' key={creature.url}>
               <div className='creature-neem'>{creature.title}</div>  <br></br> 
