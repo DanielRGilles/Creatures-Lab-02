@@ -20,22 +20,22 @@ export default class App extends Component {
       if (!this.state.keyword){
     return true }
      return (creature.keyword === this.state.keyword) });
-     console.log(selectedCreatures)
+     
      const moreFiltered =
      selectedCreatures
      .filter(selectedCreatures => {
       if (!this.state.horns){
     return true }
      return (selectedCreatures.horns === Number(this.state.horns))})
-     console.log(selectedCreatures.horns)
+     
     return (
       <div>
         <Header/>
         <div className='creature-select'>
         
-        <label>Choose a Horned Creature  </label>
+        <label>Choose a Horned Creature: By Name  </label>
        <select onChange={this.handleChange}> 
-        <option value=''></option>
+        <option value=''>All</option>
         <option value='narwhal'>Narwhal</option>
         <option value='rhino'>Rhino</option>
         <option value='unicorn'>Unicorn</option>
@@ -48,12 +48,13 @@ export default class App extends Component {
         <option value='lizard'>Lizard</option>
         <option value='dragon'>Dragon</option>
         </select>
-        <label>  Number of horns  </label>
+        <label> Or  Number of horns  </label>
         <select onChange={this.handleHornChange}> 
         <option value=''>All</option>
         <option value='1'>1</option>
         <option value='2'>2</option>
         <option value='3'>3</option>
+        <option value='100'>100</option>
         </select>
         </div>
         <ul className='list'>

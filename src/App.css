@@ -40,6 +40,7 @@ body {
   height: 50%;
   border-radius: 5px;
   border: solid grey 1px;
+  margin-left: 12px;
 }
 .creature-neem {
 font-size: large;
@@ -47,7 +48,8 @@ text-transform: uppercase;
 font-weight: bold;
 }
 .creature-deets {
+  margin: 1px 5px 1px 5px;
   background-color: white;
   border: ridge 1px black;
-
+  padding-left: 5px;
 }
