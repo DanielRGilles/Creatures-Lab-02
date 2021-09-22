@@ -1,0 +1,15 @@
+.horns {
+    width: 55vw;
+    height: 90vh;
+}
+.home-body {
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+    
+}
+.home-body > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
