@@ -1,6 +1,11 @@
 .horns {
     width: 55vw;
     height: 90vh;
+    animation: pulse 5s infinite ease-in-out;
+    
+}
+.horns:hover {
+    transform: rotate3d(100, 10, -10, 50deg)
 }
 .home-body {
     width: 100vw;
@@ -13,3 +18,19 @@
     justify-content: center;
     align-items: center;
 }
+@keyframes pulse {
+    20% {
+      transform: scale(1.2);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(1.2);
+      }
+
+    80% {
+        transform: scale(1);
+    }}
